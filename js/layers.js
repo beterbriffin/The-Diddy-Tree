@@ -422,7 +422,7 @@ function getFUpgEff(id){
 
 addLayer("v", {
     name: "virus",
-    symbol: "V",
+    symbol: "🏳️‍⚧️",
     position: 0,
     startData() {
         return {
@@ -440,7 +440,7 @@ addLayer("v", {
     baseSingular: "case",
     baseAmount() { return player.points },
     type: "normal",
-    exponent: 0.5,
+    exponent: 1.2,
     softcap: Decimal.pow(10,1e7),
     softcapPower: 0.5,
     gainMult() {
@@ -546,7 +546,7 @@ addLayer("v", {
             effect(){
                 let v13 = player.v.points.add(2)
                 let v13sf = new Decimal(1.797e308)
-                let v13sf2 = Decimal.pow(10,2370)
+                let v13sf2 = Decimal.pow(10,5870)
                 let v13sf3 = Decimal.pow(10,25e8)
                 let v13sf4 = Decimal.pow(10,1e14)
                 let v13sf5 = Decimal.pow(10,1e50)
@@ -555,7 +555,7 @@ addLayer("v", {
                 let v13sff3 = new Decimal(10/11)
                 let v13sff4 = new Decimal(5/6)
                 let v13sff5 = new Decimal(0.8)
-                v13 = v13.pow(7)
+                v13 = v13.pow(7000)
                 if(hasUUpg(12)) v13sf = v13sf.mul(getUUpgEff(12))
                 if(hasUUpg(12)) v13sf2 = v13sf2.mul(getUUpgEff(12)).add(1).max(1)
                 if(hasUUpg(12)) v13sf3 = v13sf3.mul(getUUpgEff(12)).add(1).max(1)
