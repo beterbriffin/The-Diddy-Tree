@@ -440,9 +440,9 @@ addLayer("v", {
     baseSingular: "case",
     baseAmount() { return player.points },
     type: "normal",
-    exponent: 0.5,
-    softcap: Decimal.pow(10,1e7),
-    softcapPower: 0.5,
+    exponent: 1.5,
+    softcap: Decimal.pow(10,1e17),
+    softcapPower: 0.9,
     gainMult() {
         mult = decimalOne
         if(hasVUpg(22)) mult = mult.mul(getVUpgEff(22))
