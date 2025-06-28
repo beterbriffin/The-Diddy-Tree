@@ -440,9 +440,9 @@ addLayer("v", {
     baseSingular: "case",
     baseAmount() { return player.points },
     type: "normal",
-    exponent: 1.5,
-    softcap: Decimal.pow(10,1e17),
-    softcapPower: 0.9,
+    exponent: 0.5,
+    softcap: Decimal.pow(10,1e7),
+    softcapPower: 0.5,
     gainMult() {
         mult = decimalOne
         if(hasVUpg(22)) mult = mult.mul(getVUpgEff(22))
@@ -555,7 +555,7 @@ addLayer("v", {
                 let v13sff3 = new Decimal(10/11)
                 let v13sff4 = new Decimal(5/6)
                 let v13sff5 = new Decimal(0.8)
-                v13 = v13.pow(1/2)
+                v13 = v13.pow(7)
                 if(hasUUpg(12)) v13sf = v13sf.mul(getUUpgEff(12))
                 if(hasUUpg(12)) v13sf2 = v13sf2.mul(getUUpgEff(12)).add(1).max(1)
                 if(hasUUpg(12)) v13sf3 = v13sf3.mul(getUUpgEff(12)).add(1).max(1)
