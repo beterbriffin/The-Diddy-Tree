@@ -11168,7 +11168,7 @@ addLayer("f", {
             },
             base() { 
                 let base = decimalTwo
-                if (hasFUpg(135)) base = base.add(0.1)
+                if (hasFUpg(135)) base = base.add(0.4)
                 if (hasFUpg(151)) base = base.add(getFUpgEff(151))
                 if (hasFUpg(173)) base = base.add(getFUpgEff(173))
                 return base
