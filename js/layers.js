@@ -11163,7 +11163,7 @@ addLayer("f", {
             },
             cost(x=tmp[this.layer].buyables[this.id].total) { // cost for buying xth buyable, can be an object if there are multiple currencies
                 if (x.gte(1e35)) x = x.div(1e35).pow(3).mul(1e35)
-                let cost = Decimal.pow(10, x).mul(5)
+                let cost = Decimal.pow(3.6, x).mul(5)
                 return cost.floor()
             },
             base() { 
