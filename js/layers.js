@@ -12493,7 +12493,7 @@ addLayer("f", {
         91: {
 			title: "Casual Replicate Multiplier",
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-                let cost = Decimal.pow(1e16, x).mul("1e470")
+                let cost = Decimal.pow(1e10, x).mul("1e450")
                 return cost.floor()
             },
             total() {
@@ -12639,7 +12639,7 @@ addLayer("f", {
                 return dis
             },
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-                let cost = Decimal.pow(1e25, x).mul(Decimal.pow(1e5,(x.pow(2).add(x).div(2)))).mul("1e750")
+                let cost = Decimal.pow(1e16, x).mul(Decimal.pow(1e5,(x.pow(2).add(x).div(2)))).mul("1e750")
                 let s = x.sub(100)
                 if (x.gte(1e5)) x = Decimal.pow(1.0001,x.sub(1e5)).mul(1e5)
                 if (x.gte(100)) cost = Decimal.pow("e775", s).mul(Decimal.pow(1e55,(s.pow(2).add(s).div(2)))).mul("e28500")
