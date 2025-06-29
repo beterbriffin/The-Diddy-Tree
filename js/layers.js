@@ -548,14 +548,14 @@ addLayer("v", {
                 let v13sf = new Decimal(1.797e308)
                 let v13sf2 = Decimal.pow(10,5870)
                 let v13sf3 = Decimal.pow(10,25e8)
-                let v13sf4 = Decimal.pow(10,1e14)
+                let v13sf4 = Decimal.pow(10,1e15)
                 let v13sf5 = Decimal.pow(10,1e50)
                 let v13sff = decimalHalf
                 let v13sff2 = new Decimal(0.8)
                 let v13sff3 = new Decimal(10/11)
                 let v13sff4 = new Decimal(5/6)
                 let v13sff5 = new Decimal(0.8)
-                v13 = v13.pow(7000)
+                v13 = v13.pow(7100)
                 if(hasUUpg(12)) v13sf = v13sf.mul(getUUpgEff(12))
                 if(hasUUpg(12)) v13sf2 = v13sf2.mul(getUUpgEff(12)).add(1).max(1)
                 if(hasUUpg(12)) v13sf3 = v13sf3.mul(getUUpgEff(12)).add(1).max(1)
@@ -12493,7 +12493,7 @@ addLayer("f", {
         91: {
 			title: "Casual Replicate Multiplier",
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-                let cost = Decimal.pow(1e25, x).mul("1e470")
+                let cost = Decimal.pow(1e16, x).mul("1e470")
                 return cost.floor()
             },
             total() {
