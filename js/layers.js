@@ -18371,7 +18371,7 @@ addLayer("e", {
                 x = x.mul(scale)
                 if (x.gte(600)) x = x.div(600).pow(5).mul(600)
                 if (x.gte(30)) x = x.div(30).pow(2).mul(30)
-                let cost = Decimal.pow(2, Decimal.pow(1.5, x)).mul(5)
+                let cost = Decimal.pow(1.7, Decimal.pow(1.2, x)).mul(5)
                 return cost.floor()
             },
             scale() {
