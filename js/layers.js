@@ -18371,7 +18371,7 @@ addLayer("e", {
                 x = x.mul(scale)
                 if (x.gte(600)) x = x.div(600).pow(5).mul(600)
                 if (x.gte(30)) x = x.div(30).pow(2).mul(30)
-                let cost = Decimal.pow(1.7, Decimal.pow(1.2, x)).mul(5)
+                let cost = Decimal.pow(1.67, Decimal.pow(1.2, x)).mul(5)
                 return cost.floor()
             },
             scale() {
@@ -18380,8 +18380,8 @@ addLayer("e", {
                 return s
             },
             base() { 
-                let base = new Decimal(1.25)
-                if (hasUpgrade("e",115)) base = base.add(0.025)
+                let base = new Decimal(1.37)
+                if (hasUpgrade("e",115)) base = base.add(0.035)
                 if (hasUpgrade("e",134)) base = base.add(upgradeEffect("e",134))
                 if (hasUpgrade("e",166)) base = base.add(upgradeEffect("e",166))
                 base = base.mul(tmp.e.buyables[42].effect).pow(tmp.e.buyables[42].effect)
