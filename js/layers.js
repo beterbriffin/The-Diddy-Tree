@@ -18931,11 +18931,11 @@ addLayer("e", {
         71: {
 			title: "RNA Gain",
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-                let cost = Decimal.pow(4, x.pow(1.5)).mul(5e20)
+                let cost = Decimal.pow(3.6, x.pow(1.43)).mul(5e19)
                 return cost.floor()
             },
             base() { 
-                let base = Decimal.add(3,tmp.e.buyables[72].effect)
+                let base = Decimal.add(3.01,tmp.e.buyables[72].effect)
                 return base
             },
             total() {
