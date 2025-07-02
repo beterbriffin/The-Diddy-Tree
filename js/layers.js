@@ -18995,8 +18995,8 @@ addLayer("e", {
                 return cost.floor()
             },
             base() { 
-                let base = new Decimal(0.25)
-                if (hasUpgrade("Uu",94)) base = base.add(0.25)
+                let base = new Decimal(0.46)
+                if (hasUpgrade("Uu",94)) base = base.add(0.35)
                 if (hasUpgrade("Uu",95) && player.e.rna.gte(5e73)) base = base.add(0.1)
                 if (hasUpgrade("Us",11)) base = base.add(0.05)
                 return base.add(tmp.e.Ureffect)
