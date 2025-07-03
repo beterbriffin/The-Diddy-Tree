@@ -18447,7 +18447,7 @@ addLayer("e", {
 			title: "Disease Boost",
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
                 if (x.gte(1.5e4)) x = x.div(1.5e4).pow(4).mul(1.5e4)
-                let cost = Decimal.pow(2, Decimal.pow(2, Decimal.pow(tmp.e.buyables[42].scale, x.add(12)))).mul(Decimal.pow(10,36974))
+                let cost = Decimal.pow(2, Decimal.pow(1.9999, Decimal.pow(tmp.e.buyables[42].scale, x.add(12)))).mul(Decimal.pow(10,36974))
                 return cost.floor()
             },
             scale() {
@@ -18457,8 +18457,8 @@ addLayer("e", {
                 return s
             },
             base() { 
-                let base = new Decimal(1.002)
-                if (hasUpgrade("e",45)) base = base.add(0.005)
+                let base = new Decimal(1.01)
+                if (hasUpgrade("e",45)) base = base.add(0.007)
                 if (hasUpgrade("e",105)) base = base.add(0.003)
                 if (hasUpgrade("e",236)) base = base.add(0.002)
                 if (hasUpgrade("e",293)) base = base.add(0.003)
