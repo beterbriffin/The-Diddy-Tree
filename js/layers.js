@@ -19353,7 +19353,7 @@ addLayer("e", {
             },
             base() { 
                 let base = player.e.infections.max(10).log10().max(10).log10()
-                .pow(0.3)
+                .pow(0.4)
                 return base.add(tmp.e.buyables[101].effect)
             },
             total() {
