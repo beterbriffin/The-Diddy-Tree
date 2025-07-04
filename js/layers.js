@@ -19348,12 +19348,12 @@ addLayer("e", {
         93: {
 			title: "mRNA Gain",
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-                let cost = Decimal.pow(5, x.pow(1.5)).mul(5e9)
+                let cost = Decimal.pow(5, x.pow(1.5)).mul(4e9)
                 return cost.floor()
             },
             base() { 
                 let base = player.e.infections.max(10).log10().max(10).log10()
-                .pow(0.1)
+                .pow(0.3)
                 return base.add(tmp.e.buyables[101].effect)
             },
             total() {
